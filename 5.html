@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="app">
+        <input type="checkbox" v-model="imgShow">
+        <br>
+        <input type="text" :value="title">
+        <input type="text" :value="imgUrl">
+        <br>
+        <input type="text" v-model="title">
+        <input type="text" v-model="imgUrl">
+
+        <div v-if="imgShow">
+           <img @click="changeImg" :src="imgUrl" :alt="title" v-bind:title="title">
+        </div>
+    </div>
+</div>
+
+
+
+    <script >
+
+const App = {
+ data () {
+     return {
+         title:'aaaaa',
+        imgUrl : './img/111.jpg',
+         imgShow: true
+     }
+    },
+
+    methods: {
+        changeImg() {
+            const arr = ['./img/111.jpg', './img/222.jpg']
+            this.imgUrl = arr[Math.floor(Math.random() * arr.length)]
+        }
+    },
+
+    computed: {
+       
+    }
+}
+
+Vue.createApp(App).mount('#app')
+
+
+    </script>
+</body>
+</html>
