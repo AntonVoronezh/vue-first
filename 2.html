@@ -15,8 +15,8 @@
         </div>
 
 <div class="app__body">
-    <button>{{buttons.prev.title}}</button>
-    <button>{{buttons.next.title}}</button>
+    <button @click="down"> {{buttons.prev.title}}</button>
+    <button @click="up">{{buttons.next.title}}</button>
 </div>
 
     </div>
@@ -37,6 +37,15 @@ const App = {
              prev: {title: 'down',},
              next: {title: 'up',}
          }
+        }
+    },
+
+    methods: {
+     up(){
+         this.priority.value +=1
+     },
+        down(){
+            this.priority.value -=1
         }
     }
 }
