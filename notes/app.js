@@ -6,10 +6,12 @@ const App = {
         value: "",
         placeholder: "type or not",
       },
+      notes: []
     };
   },
   methods: {
     onSubmit() {
+      this.notes.push(this.input.value)
         console.log(this.input)
     }
   },

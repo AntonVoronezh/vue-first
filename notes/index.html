@@ -17,6 +17,12 @@
           />
           <button type="submit">add new note</button>
         </form>
+
+        <div class="notes">
+          <div class="note" v-for="(note, index) in notes" :key="index">
+            <p>{{note}}</p>
+          </div>
+        </div>
       </div>
     </div>
 
