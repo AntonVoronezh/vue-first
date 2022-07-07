@@ -15,8 +15,10 @@ const App = {
   watch: {
     notes: {
       handler(updateList) {
+        console.log(updateList)
         localStorage.setItem("notes", JSON.stringify(updateList));
       },
+      deep: true
     },
   },
   methods: {
