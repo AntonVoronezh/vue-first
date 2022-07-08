@@ -2,9 +2,9 @@
   <div class="wrapper">
     <TheHeader />
     <div class="wrapper-content">
-      <div class="container">gggggggggggg</div>
+      <div class="container"><router-view /></div>
     </div>
-    <TheFooter  />
+    <TheFooter />
   </div>
 </template>
 
