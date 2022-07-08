@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <TheHeader :links="links" :title="title" />
+    <TheHeader />
     <div class="wrapper-content">
       <div class="container">gggggggggggg</div>
     </div>
-    <TheFooter :links="links" />
+    <TheFooter  />
   </div>
 </template>
 
@@ -14,23 +14,6 @@ import TheFooter from "@/components/TheFooter";
 
 export default {
   components: { TheHeader, TheFooter },
-  data() {
-    return {
-      title: "TTTitle2",
-      links: [
-        {
-          title: "Home",
-          alias: "home",
-          url: "/",
-        },
-        {
-          title: "About",
-          alias: "about",
-          url: "/about",
-        },
-      ],
-    };
-  },
 };
 </script>
 
