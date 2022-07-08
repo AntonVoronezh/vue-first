@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="app">
+
+        <div class="app__header">
+            {{priority.title}} - {{priority.value}}
+        </div>
+
+<div class="app__body">
+    <button @click="up">{{buttons.next.title}}</button>
+    <br />
+    <button @click="down" v-if="priority.value > 0"> {{buttons.prev.title}}</button>
+</div>
+
+        <div>
+            <p v-if="priority.value === 3">priority 3</p>
+            <p v-else-if="priority.value === 2">priority 2</p>
+            <p v-else>priority !!!</p>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <script >
+
+const App = {
+ data () {
+     return {
+         priority : {
+             title: 'vue title',
+             value: 0
+         },
+         buttons : {
+             prev: {title: 'down',},
+             next: {title: 'up',}
+         }
+        }
+    },
+
+    methods: {
+     up(){
+         if(this.priority.value < 3){
+           this.priority.value +=1
+         }
+     },
+        down(){
+            if(this.priority.value >= 1){
+                this.priority.value -=1
+            }
+        }
+    }
+}
+
+// const App = {
+//     data: () => ({
+//          title: 'vue title'
+//     })
+// }
+
+Vue.createApp(App).mount('#app')
+
+
+    </script>
+</body>
+</html>

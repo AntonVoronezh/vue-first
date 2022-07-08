@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="app">
+      <ul>
+          <li v-for="people in peoples" key="people.id">{{people.name}}</li>
+      </ul>
+        <button @click="changeImg" > 99999 </button>
+    </div>
+</div>
+
+
+
+    <script >
+
+const App = {
+ data () {
+     return {
+         peoples: [
+             {
+             id: 1,
+                 name: 'AA'
+             },
+             {
+                 id: 2,
+                 name: 'BB'
+             }
+         ],
+             }
+    },
+
+    methods: {
+        changeImg() {
+this.peoples.push(
+    {
+        id: this.peoples.length + 1,
+        name: 'AA'
+    }
+)
+        }
+    },
+
+    computed: {
+       
+    }
+}
+
+Vue.createApp(App).mount('#app')
+
+
+    </script>
+</body>
+</html>

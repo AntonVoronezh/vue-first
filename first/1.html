@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div id="app">
+
+        {{title}}
+
+    </div>
+</div>
+
+
+
+    <script >
+
+const App = {
+ data () {
+     return {
+         title: 'vue title'
+        }
+    }
+}
+
+// const App = {
+//     data: () => ({
+//          title: 'vue title'
+//     })
+// }
+
+Vue.createApp(App).mount('#app')
+
+
+    </script>
+</body>
+</html>
