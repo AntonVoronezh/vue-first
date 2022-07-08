@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <TheHeader />
+    <TheHeader :links="links" :title="title" />
     <div class="wrapper-content">
       <div class="container">gggggggggggg</div>
     </div>
-    <TheFooter />
+    <TheFooter :links="links" />
   </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
   components: { TheHeader, TheFooter },
   data() {
     return {
+      title: "TTTitle2",
       links: [
         {
           title: "Home",
