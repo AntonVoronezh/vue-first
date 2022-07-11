@@ -1,5 +1,5 @@
 export const app = {
-  title: "AAAA",
+  title: "Clash of Clans",
 };
 
 export const links = [
