@@ -1,8 +1,12 @@
 <template>
   <div class="card">
+<!--    <slot name="header"></slot>-->
     <span class="card-name">{{ name }}</span>
     <span class="card-title">{{ title }}</span>
-    <div class="card-body">33</div>
+ <div class="card-body">
+<!--<slot name="body"></slot>-->
+    <slot></slot>
+    </div>
   </div>
 </template>
 
