@@ -5,6 +5,7 @@
       :title="`${item.title} lvl`"
       :name="`${item.lvl}`"
       :img="`${item.img}`"
+      :link="`/${item.alias}`"
     >
       <!--     <template v-slot:header>Head {{item.title}}</template>-->
       <!--     <template v-slot:body>BODY </template>-->
@@ -15,7 +16,7 @@
 
 <script>
 import TheCard from "@/components/UI/TheCard";
-import items from "../seeders/items.json";
+import items from "@/seeders/items.js";
 
 export default {
   components: { TheCard },

@@ -9,6 +9,8 @@
  <div class="card-body">
 <!--<slot name="body"></slot>-->
     <slot></slot>
+   
+   <router-link v-if="link" :to="link" class="link" style="display: block">See more</router-link>
     </div>
   </div>
 </template>
@@ -26,6 +28,9 @@ export default {
       required: true
     },
     img : {
+      type: String
+    },
+    link: {
       type: String
     }
 
