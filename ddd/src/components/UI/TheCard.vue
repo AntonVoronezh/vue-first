@@ -3,11 +3,11 @@
     <div v-if="img" class="card-img__wrapper">
       <img :src="img" >
     </div>
-<!--    <slot name="header"></slot>-->
+    <slot name="header"></slot>
     <span class="card-name">{{ name }}</span>
     <span class="card-title">{{ title }}</span>
  <div class="card-body">
-<!--<slot name="body"></slot>-->
+<slot name="body"></slot>
     <slot></slot>
    
    <router-link v-if="link" :to="link" class="link" style="display: block">See more</router-link>

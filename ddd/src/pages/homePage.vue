@@ -7,9 +7,10 @@
       :img="`${item.img}`"
       :link="`/${item.alias}`"
     >
-      <!--     <template v-slot:header>Head {{item.title}}</template>-->
-      <!--     <template v-slot:body>BODY </template>-->
-      uydtyutf
+      <template v-slot:header> {{ item.description }}</template>
+      <template v-slot:body>
+      <div ></div>
+      </template>
     </TheCard>
   </div>
 </template>

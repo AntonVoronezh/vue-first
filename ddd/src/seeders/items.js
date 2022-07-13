@@ -1,11 +1,11 @@
 export default [
   {
     id: 1,
-    alias: "aaaaaa",
-    title: "aaaaaa",
+    alias: "barbarian",
+    title: "The Barbarian",
     description: "vvvvv vvvvvvvv vvvvvvvvv",
     lvl: 4,
-    img: null,
+    img: 'https://tocode.ru/static/uploads/courses/3/clash-of-clans-images/barbarian.png',
   },
   {
     id: 2,
